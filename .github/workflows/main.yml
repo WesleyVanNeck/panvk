@@ -44,7 +44,7 @@ jobs:
           cd ..
           git clone --depth 1 -b panvk https://gitlab.freedesktop.org/panfrost/mesa.git
           cd mesa
-          cp ../* .
+          cp ../android-* .
           envsubst <android-${{matrix.arch}} >build-crossfile
           meson setup "build-android" \
             --prefix=/tmp/pan \
