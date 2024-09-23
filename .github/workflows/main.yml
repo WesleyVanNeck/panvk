@@ -42,8 +42,8 @@ jobs:
             -Detnaviv=disabled
           ninja -C "build-android" install
           cd ..
-          git clone --depth 1 -b panvk https://gitlab.freedesktop.org/panfrost/mesa.git
-          cd mesa
+          git clone https://github.com/WesleyVanNeck/mesa-Panfrost-G610.git
+          cd mesa-Panfrost-G610
           cp ../android-* .
           envsubst <android-${{matrix.arch}} >build-crossfile
           meson setup "build-android" \
